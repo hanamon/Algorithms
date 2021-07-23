@@ -6,15 +6,6 @@
 // 2. arr.sort 사용은 금지된다.
 
 // [시도 : Number 1.]
-
-// 요구 사항 : 수를 요소로 갖는 배열을 입력받아 오름차순으로 정렬하여 리턴한다.
-// 입력 : 수를 요소로 갖는 배열, arr[i]의 길이는 1,000 이하
-// 출력 : 수를 요소로 갖는 배열
-// 주의 사항 : 
-// 1. 버블 정렬(bubble sort)로 구현한다.
-// 2. arr.sort 사용은 금지된다.
-
-// [시도 : Number 1.]
 const bubbleSort = function (arr) {
 
   for( let i=0; i<arr.length; i++ ) {
