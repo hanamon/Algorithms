@@ -1,7 +1,8 @@
-# Algorithms
+# 🔥 JavaScript Algorithms
 
 ### 정렬 알고리즘
 - [bubbleSort : 버블 정렬](bubbleSort.js)
+- [insertionSort : 삽입 정렬](insertionSort.js)
 
 ### 자료구조
 - [Class Stack : 스택 구현](ClassStack.js)
