@@ -43,6 +43,8 @@ const insertionSort = function (arr) {
   return sorted;
 };
 
+/*--------------------------------------------------------------*/
+
 // [방법 2.] - naive solution (나이브한 솔루션)
 const insertionSort = function (arr) {
   // arr 배열의 첫 번째 요소를 담은 배열 생성
@@ -69,6 +71,8 @@ const insertionSort = function (arr) {
 
   return sorted;
 };
+
+/*--------------------------------------------------------------*/
 
 // [방법 3.] - naive solution (나이브한 솔루션) + Advanced
 // insertionSort 함수의 두 번째 인자로 콜백함수를 받아서 그 함수의 리턴 값을 기준으로 요소들을 정렬한다.
@@ -101,7 +105,10 @@ const insertionSort = function (arr, transform = (item) => item) {
   return beforeArr;
 }
 
+/*--------------------------------------------------------------*/
+
 // [방법 4.] - optimized solution (최적화된 솔루션) + Advanced
+// insertionSort 함수의 두 번째 인자로 콜백함수를 받아서 그 함수의 리턴 값을 기준으로 요소들을 정렬한다.
 const insertionSort = function (arr, transform = (item) => item) {
   const sorted = [arr[0]];
 
