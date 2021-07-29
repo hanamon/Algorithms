@@ -1,10 +1,16 @@
-// 요구 사항 : 인자로 들어온 수의 피보나치 수열 값을 출력하라.
-// 입력 : 숫자
-// 출력 : 숫자
+/*
+  * [피보나치 수 구하기]
+  * 요구 사항 : 인자로 들어온 수의 피보나치 수를 출력하라.
+  * 입력 : 숫자를 입력 받는다.
+  * 출력 : 숫자를 리턴한다.
+  * 입출력 예시 : fibonacciFn(5); // 5
+  * 입출력 예시 : fibonacciFn(10); // 55
+*/
 
-// [방법 1]
-// Recursion + Memoization (재귀 + 메모이제이션) - Top-Down 방식
-const fibonacciFn = (number, memo = []) => {
+/*--------------------------------------------------------------*/
+
+// [방법 1.] - Recursion + Memoization (재귀 + 메모이제이션) - Top-Down 방식
+const fibonacciFn = function (number, memo = []) {
   // 이미 해결한 하위 문제인지 찾아본다. (두 번 계산 안함)
   if( memo[number] !== undefined ) return memo[number];
   // 재귀 탈출 조건
@@ -17,6 +23,3 @@ const fibonacciFn = (number, memo = []) => {
 
   return result;
 }
-
-fibonacciFn(5); // 5
-fibonacciFn(10); // 55
