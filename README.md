@@ -5,6 +5,7 @@
 
 ### 자료구조
 - [Class Stack : 스택 구현](ClassStack.js)
+- [Class Queue : 큐 구현](ClassQueue.js)
 
 ### 미분류
 - [divisorsFn : 약수 구하기](divisorsFn.js)
