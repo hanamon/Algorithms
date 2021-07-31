@@ -5,6 +5,7 @@
 - [Class Queue : Queue 구현](data-structures/ClassQueue.js)
 - [Class Tree : Tree 구현](data-structures/ClassTree.js)
 - [Class Graph with adjacency matrix : Graph 인접 행렬 구현](data-structures/ClassGraphWithAdjacencyMatrix.js)
+- [Class Binary Search Tree : BST 구현](data-structures/ClassBinarySearchTree.js)
 
 ### 정렬 알고리즘 (Sort Algorithms)
 - [bubbleSort : 버블 정렬](toy-algorithms/bubbleSort.js)
