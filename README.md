@@ -1,5 +1,11 @@
 # 🔥 JavaScript Algorithms
 
+### 자료구조 (Data Structures)
+- [Class Stack : Stack 구현](data-structures/ClassStack.js)
+- [Class Queue : Queue 구현](data-structures/ClassQueue.js)
+- [Class Tree : Tree 구현](data-structures/ClassTree.js)
+- [Class Graph with adjacency matrix : Graph 인접 행렬 구현](data-structures/ClassGraphWithAdjacencyMatrix.js)
+
 ### 정렬 알고리즘 (Sort Algorithms)
 - [bubbleSort : 버블 정렬](toy-algorithms/bubbleSort.js)
 - [insertionSort : 삽입 정렬](toy-algorithms/insertionSort.js)
@@ -8,11 +14,6 @@
 - [radixSort : 기수 정렬](toy-algorithms/radixSort.js)
 
 ### 행렬 알고리즘 (Matrix Algorithms)
-
-### 자료구조 (Data Structures)
-- [Class Stack : Stack 구현](data-structures/ClassStack.js)
-- [Class Queue : Queue 구현](data-structures/ClassQueue.js)
-- [Class Tree : Tree 구현](data-structures/ClassTree.js)
 
 ### 미분류
 - [divisorsFn : 약수 구하기](uncategorized/divisorsFn.js)
