@@ -12,6 +12,7 @@
 ### 자료구조 (Data Structures)
 - [Class Stack : Stack 구현](data-structures/ClassStack.js)
 - [Class Queue : Queue 구현](data-structures/ClassQueue.js)
+- [Class Tree : Tree 구현](data-structures/ClassTree.js)
 
 ### 미분류
 - [divisorsFn : 약수 구하기](uncategorized/divisorsFn.js)
