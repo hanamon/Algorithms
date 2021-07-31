@@ -27,7 +27,6 @@ class BinarySearchTree {
   // 이진 탐색 트리에서는 현재 노드보다 작은 수는 left에, 큰 수는 right에 저장한다.
   insert(value) {
     // 현재 노드보다 작은 데이터가 들어온 경우
-    
     if( value < this.value ) {
       // 만약 현재 노드의 left 변수가 비어있을 경우 BinarySearchTree의 인스턴스를 값을 넣어 생성한다.
       if( this.left === null ) {
