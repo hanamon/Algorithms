@@ -66,7 +66,7 @@ function getMax(arr) {
 
 // 계수 정렬 함수
 function countingSort(arr, radix) {
-  const outputArr = Array(N).fill(0);
+  const outputArr = Array(arr.length).fill(0);
   const countArr = Array(10).fill(0);
   
   // 입력 배열을 순회하며, 요소 값에 해당하는 카운트 배열에 index에 카운트한다.
