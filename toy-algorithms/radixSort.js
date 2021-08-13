@@ -38,7 +38,7 @@
 /*--------------------------------------------------------------*/
 
 // [방법 1.] - naive solution (나이브한 솔루션) 양의 정수만 정렬 가능
-
+// 계수 정렬 함수
 function radixSort(arr) {
   // 배열의 최대수를 뽑아낸다.
   const max = getMax(arr);
@@ -66,7 +66,7 @@ function getMax(arr) {
   }, 0);
 }
 
-// 계수 정렬 함수
+// 자리수 정렬 함수
 function countingSort(arr, radix) {
   // 입력 배열의 길이 만큼 출력 배열을 만든다.
   const outputArr = Array(arr.length).fill(0);
@@ -81,7 +81,7 @@ function countingSort(arr, radix) {
     countArr[idx]++;
   });
   
-  // countArr[i]가 i까지의 누적 개수가 되도록 만든다.
+  // countArr[i]가 i까지의 누적 개수가 되도록 만든다. (0번 인덱스는 건너뛴다. 즉, 1번째 인덱스부터 합한다.)
   countArr.reduce((totalNum, num, idx) => {
     countArr[idx] = totalNum + num;
     return totalNum + num;
@@ -118,8 +118,7 @@ radixSort( [10, 1, 2, 3, 15, 7] );
 /*--------------------------------------------------------------*/
 
 // [방법 1.] - 위와 동일한 코드이다. (주석없고 콘솔 확인하기 위해)
-
-// 시작 함수
+// 계수 정렬 함수
 function radixSort(arr) {
   const max = getMax(arr);
   let radix = 1;
@@ -140,7 +139,7 @@ function getMax(arr) {
   }, 0);
 }
 
-// 계수 정렬 함수
+// 자리수 정렬 함수
 function countingSort(arr, radix) {
   const outputArr = Array(arr.length).fill(0);
   const countArr = Array(10).fill(0);
@@ -156,6 +155,7 @@ function countingSort(arr, radix) {
   console.log('카운트 배열 : ', test);
 
   countArr.reduce((totalNum, num, idx) => {
+    console.log('totalNum : ', totalNum, ' num : ', num, ' idx : ', idx);
     countArr[idx] = totalNum + num;
     return totalNum + num;
   });
@@ -212,3 +212,97 @@ radixSort( [10, 1, 2, 3, 15, 7] );
   *    <이해> : 0의 자리수가 하나 있으면 카운트 배열의 0번째 인덱스가 1이 된다.
   *             그러므로 1개 있는 0의 자리수를 출력함수 0번째 인덱스에 할당하기 위해서는 누적합(자리수)에 - 1 을 해줘야만한다.
 */
+
+/*--------------------------------------------------------------*/
+
+/*
+  * [음의 정수를 포함한 기수 정렬]
+  * 1. 주어진 배열을 음수 부분과 양수 부분으로 나눈다.
+  * 2. 음수는 절대값을 기준으로, 즉 양수로 변환하여 기수 정렬한다.
+  * 3. 양수를 정렬한다.
+  * 4. 정렬된 음수 부분을 다시 음수로 바꾸고 순서를 뒤짚는다.
+  * 5. 음수 부분과 양수 부분을 붙인다.
+*/
+
+// [방법 2.] - 음에 정수를 포함한 기수 정렬
+// 기수 정렬 함수
+function radixSort(arr) {
+  // 음수인 경우와 양수인 경우를 나누는 배열을 각각 만든다.
+  let left = [];
+  let right = [];
+
+  // 입력 배열의 각 요소를 검사해 음수와 양수로 나눈다.
+  arr.forEach((item) => {
+    if( item >= 0 ) right.push(item);
+    else left.push(item * -1); // 음수를 양수로 만들어 준다.
+  });
+
+  // 음수 배열 부터 정렬한다.
+  let max = getMax(left); // 최대값을 추출한다.
+  let radix = 1; // 자리수의 초기값을 할당한다.
+
+  // 최대값의 자리수만큼 반복한다.
+  while( parseInt( max / radix ) > 0 ) {
+    // 자리수마다 정렬된 배열을 새롭게 할당한다.
+    left = countingSort(left, radix);
+    // 자리수가 증가된다.
+    radix *= 10;
+  }
+
+  // 양수 배열을 정렬한다.
+  max = getMax(right);
+  radix = 1;
+
+  while( parseInt( max / radix ) > 0 ) {
+    right = countingSort(right, radix);
+    radix *= 10;
+  }
+
+  // 음수 배열을 리버스해서 다시 음수로 만들어 주고 양의 배열을 합친다.
+  return left.map((el) => el * -1).reverse().concat(right);
+}
+
+// 최대값 추출 함수
+function getMax(arr) {
+  return arr.reduce((max, item) => {
+    if( max < item ) return item;
+    return max;
+  }, 0);
+}
+
+// 자리수 정렬 함수
+function countingSort(arr, radix) {
+  // 새로운 배열을 입력 배열 길이로 만든다.
+  const outputArr = new Array(arr.length).fill(0);
+  // 계수 정렬할 카운트 배열을 0 ~ 9의 길이로 만든다.
+  const countArr = new Array(10).fill(0);
+
+  // 입력 배열을 순회하며 현재 자리수에 해당하는 수의 개수를 카운트 배열에 카운트한다.
+  arr.forEach((item) => {
+    const idx = Math.floor( item / radix ) % 10;
+    countArr[idx]++;
+  });
+
+  // 카운트 배열을 순회하며 각 자리 값을 누적합으로 변환한다. (리듀스는 idx 1 부터 시작된다.)
+  countArr.reduce((a, c, idx) => {
+    countArr[idx] = a + c;
+    return a + c;
+  });
+
+  // 입력 배열을 역으로 순회하며, 입력 배열의 현재 자리수가 해당하는 카운트 배열의 값을 보고 출력 배열 index 에 해당 입력 배열의 값을 할당한다.
+  // 해당 누적합된 카운트 배열 요소에 -1 해주는 것도 잊지 않는다. (그래야 다음에 오는 작은 수와 겹치치 않는다.)
+  let el = arr.length-1;
+
+  while( el >= 0 ) {
+    const idx = Math.floor( arr[el] / radix ) % 10;
+    outputArr[countArr[idx] - 1] = arr[el];
+
+    countArr[idx] -= 1;
+    el--;
+  }
+
+  // 새로운 배열을 리턴한다.
+  return outputArr;
+}
+
+radixSort( [10, 1, 2, -100, -45, -2, 3, 15, 7, -6] );
