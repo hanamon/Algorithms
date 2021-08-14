@@ -8,6 +8,7 @@
 - [Class Binary Search Tree : BST 구현](data-structures/ClassBinarySearchTree.js)
 - [Create Matrix : 인접 행렬 생성하기](data-structures/createMatrix.js)
 - [Get Directions : 인접 행렬 길찾기](data-structures/getDirections.js)
+- [Connected Vertices : 연결된 정점들](data-structures/connectedVertices.js)
 
 ### 정렬 알고리즘 (Sort Algorithms)
 - [bubbleSort : 버블 정렬](toy-algorithms/bubbleSort.js)
