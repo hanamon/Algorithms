@@ -54,21 +54,21 @@ function getDirections(matrix, from, to) {
 function getDirections(matrix, from, to) {
   if( matrix[from][to] ) return true;
 
-	let queue = [from];
-	let visited = []; 
-	
-	while( queue.length ) {
-		const now = queue.shift();
-		visited.push(now);
-		
-		if( now === to ) return true;
+  let queue = [from];
+  let visited = []; 
 
-		for( let i=0; i<matrix[now].length; i++ ) {
-			if( matrix[now][i] && !visited.includes(i) ) {
-				queue.push(i);
-			}
-		}
-	}
+  while( queue.length ) {
+    const now = queue.shift();
+    visited.push(now);
+    
+    if( now === to ) return true;
+    
+    for( let i=0; i<matrix[now].length; i++ ) {
+      if( matrix[now][i] && !visited.includes(i) ) {
+        queue.push(i);
+      }
+    }
+  }
 
   return false;
 }
@@ -107,11 +107,9 @@ function getDirections(matrix, from, to) {
     // 현재 넘어온 행이 즉, 이전 정점에서 연결 된 현재 정점이 목적지와 같지 않다.
     if ( now !== to ) {
       // 현재 행에서 다음 찾을 행이 있는지 찾아보자.
-      for( let i=0; i<matrix[now].length; i++ ) {
-        if( matrix[now][i] && !visited[i] ) {
-          queue.push(i);
-        }
-      }
+      matrix[now].forEach((el, idx) => {
+        if( matrix[now][idx] && !visited[idx] ) queue.push(idx);
+      });
     }
     // 현재 넘어온 행이 즉, 이전 정점에서 연결 된 현재 정점이 목적지와 같다.
     else return true;
