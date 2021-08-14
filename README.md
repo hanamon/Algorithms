@@ -7,6 +7,7 @@
 - [Class Graph with adjacency matrix : Graph 인접 행렬 구현](data-structures/ClassGraphWithAdjacencyMatrix.js)
 - [Class Binary Search Tree : BST 구현](data-structures/ClassBinarySearchTree.js)
 - [Create Matrix : 인접 행렬 생성하기](data-structure/createMatrix.js);
+- [Get Directions : 인접 행렬 길찾기](data-structure/getDirections.js);
 
 ### 정렬 알고리즘 (Sort Algorithms)
 - [bubbleSort : 버블 정렬](toy-algorithms/bubbleSort.js)
