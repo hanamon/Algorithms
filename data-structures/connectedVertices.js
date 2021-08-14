@@ -8,6 +8,8 @@
   *        연결된 정점의 컴포넌트의 수를 숫자로 반환
   * 주의 사항 : 주어진 간선은 무향이다.
   *             - [1, 2] 는 정점 1에서 정점 2로도 갈 수 있으며, 정점 2에서 정점 1로도 갈 수 있다.
+  * 기타 : 인접행렬, 인접리스트로 구현할 수 있다.
+  *        BFS, DFS 를 이용해서 구현할 수 있다.
 */
 
 // 입출력 예시
@@ -28,7 +30,7 @@ console.log(result); // 2
 
 /*--------------------------------------------------------------*/
 
-// [방법 1.] 배열을 이용
+// [방법 1.] 인접행렬 이용 (BFS, DFS)
 function connectedVertices(edges) {
   // 간선을 이용한 매트릭스를 만든다.
   const matrix = createMatrix(edges);
@@ -97,4 +99,70 @@ function dfs(matrix, vertex, visited) {
       dfs(matrix, idx, visited);
     }
   });
+}
+
+/*--------------------------------------------------------------*/
+
+// [방법 2.] 인접리스트 이용 (BFS, DFS)
+function connectedVertices(edges) {
+  // 간선에서 최대값을 추출한다.
+  const maxVertex = maxVertexFn(edges);
+  // 간선을 이용해 인접리스트를 만든다.
+  const adjList = createAdjList(edges, maxVertex);
+
+  // 방문한 정점을 담을 객체를 선언한다.
+  const visited = {};
+  // 컴포턴트를 카운트할 변수를 선언한다.
+  let count = 0;
+
+  // 그래프에 있는 버텍스를 전부 순회한다.
+  for( let vertex=0; vertex<=maxVertex; vertex++ ) {
+    if( !visited[vertex] ) {
+      bfs(adjList, vertex, visited);
+      count++;
+    }
+  }
+  // 카운트를 리턴한다.
+  return count;
+}
+
+function maxVertexFn(edges) {
+  return edges.reduce((a, c) => {
+    const bigger = Math.max(...c);
+    if( a < bigger ) return bigger;
+    return a;
+  }, 0);
+}
+
+function createAdjList(edges, maxVertex) {
+  // 인접리스트는 객체를 이용한다.
+  const adjList = {};
+  
+  // 최대값 길이 만큼의 인접리스트를 만든다.
+  for( let i=0; i<=maxVertex; i++ ) {
+    adjList[i] = [];
+  }
+
+  // 간선을 순회하며 인접리스트에 표시한다.
+  edges.forEach((edges, idx) => {
+    const [row, col] = edges;
+    adjList[row].push(col);
+    adjList[col].push(row);
+  });
+
+  return adjList;
+}
+
+function bfs(adjList, vertex, visited) {
+  const queue = [vertex];
+  visited[vertex] = true;
+  while( queue.length ) {
+    const current = queue.shift();
+    adjList[current].forEach((el) => {
+      if( !visited[el] ) {
+        queue.push(el);
+        visited[el] = true;
+      }
+    });
+  }
 }
