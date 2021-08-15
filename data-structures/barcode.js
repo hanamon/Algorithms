@@ -33,29 +33,34 @@ console.log(output); // "12131231321231213123"
 /*--------------------------------------------------------------*/
 
 // [방법 1.]
-function isValid(str) {
-  const reversed = str.split('').reverse().join('');
-
-  const halfLen = Math.floor(str.length / 2);
-
-  for( let i=1; i<=halfLen; i++ ) {
-    if( reversed.slice(0, i) === reversed.slice(i, i + i) ) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
 function barcode(len, str = '') {
-  if( str.length === len ) return str; 
+  // 0. 만약 문자열의 길이와 인자로 들어온 수가 같으면 문자열을 리턴한다.
+  if( str.length === len ) return str;
 
+  // 1. 반복문을 통해 1 부터 3 까지의 수를 문자열에 조합한 후 유효성검사한다.
   for( let i=1; i<=3; i++ ) {
     if( isValid(str + i) ) {
+      // 2. 조합한 문자열이 유효성검사를 통과하면 다음에 이어질 문자 찾기위해 재귀를 호출한다.
       const result = barcode(len, str + i);
       if( result ) return result;
     }
+    // 3. 조합한 문자열이 유효성검사를 통과하지 못하면 반복문에서 다음 번째 수를 문자열과 조합한다.
   }
 
-  return null;
+  // 4. 조합한 문자열이 유효성검사를 통과하지 못하면 undefined 을 반환한다.
+}
+
+function isValid(str) {
+  // 최대 절반 길이만큼만 두 개의 부분 수열이 가능하다.
+  const halfLen = Math.floor(str.length / 2);
+  // 새로운 수가 문자열에 추가되었을 때, 비교를 편하게 하기 위해 문자열을 뒤집는다.
+  const reversed = str.split('').reverse().join('');
+  // 모든 길이에 대해서 순차적으로 유효성을 검사하기 때문에,
+  // 문자열의 길이보다 보다 짧은 길이의 문자열은 이미 유효성을 통과했다.
+  // 예: '121'이 들어왔을 때 '12'는 이미 통과된 상태이다.
+  // 즉, 입력받은 문자열이 뒤집힌 상태에서 처음부터 시작하는 부분 수열만 고려하면 된다.
+  for( let i=1; i<=halfLen; i++ ) {
+    if( reversed.slice(0, i) === reversed.slice(i, i + i) ) return false;
+  }
+  return true;
 }
