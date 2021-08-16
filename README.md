@@ -13,7 +13,7 @@
 - [Connected Vertices : 연결된 정점들](data-structures/connectedVertices.js)
 
 ### 자료탐색 응용 (Keyword: BFS, DFS, Matrix)
-- [Create Barcode : 바코드 만들기](data-structures/barcode.js)
+- [Barcode : 바코드 만들기](data-structures/barcode.js)
 - [Sudoku : 스도쿠 완성하기](toy-algorithms/sudoku.js)
 
 ### 정렬 알고리즘 (Sort Algorithms)
