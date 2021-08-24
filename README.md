@@ -25,6 +25,7 @@
 
 ### 탐욕 알고리즘 (Greedy Algorithms)
 - [movingStuff : 짐 나르기](greedy-algorithms/movingStuff.js)
+- [partTimeJob : 편의점 알바](greedy-algorithms/partTimeJob.js)
 
 ### 미분류
 - [divisorsFn : 약수 구하기](uncategorized/divisorsFn.js)
