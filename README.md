@@ -23,6 +23,9 @@
 - [mergeSort : 병합 정렬](toy-algorithms/mergeSort.js)
 - [radixSort : 기수 정렬](toy-algorithms/radixSort.js)
 
+### 탐욕 알고리즘 (Greedy Algorithms)
+- [movingStuff : 짐 나르기](greedy-algorithms/movingStuff.js)
+
 ### 미분류
 - [divisorsFn : 약수 구하기](uncategorized/divisorsFn.js)
 - [fibonacciFn : 피보나치 수 구하기](uncategorized/fibonacciFn.js)
