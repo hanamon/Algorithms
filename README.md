@@ -29,6 +29,7 @@
 
 #### 구현 문제 (Implementation)
 - [boardGame : 보드 게임](implementation/boardGame.js)
+- [Spiral Traversal : 나선형 순회](toy-algorithms/spiralTraversal.js)
 
 #### 수 구하기 (Find Number)
 - [divisorsFn : 약수 구하기](find-number/divisorsFn.js)
