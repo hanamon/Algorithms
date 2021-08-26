@@ -1,5 +1,9 @@
 # 🔥 JavaScript Algorithms
 
+#### 수 구하기 (Find Number)
+- [divisorsFn : 약수 구하기](find-number/divisorsFn.js)
+- [fibonacciFn : 피보나치 수 구하기](find-number/fibonacciFn.js)
+
 #### 정렬 알고리즘 (Sort Algorithms)
 - [bubbleSort : 버블 정렬](toy-algorithms/bubbleSort.js)
 - [insertionSort : 삽입 정렬](toy-algorithms/insertionSort.js)
@@ -29,9 +33,6 @@
 
 #### 구현 문제 : 행렬 관련 (Implementation)
 - [boardGame : 보드 게임](implementation/boardGame.js)
-- [Spiral Traversal : 나선형 순회](toy-algorithms/spiralTraversal.js)
 - [Rotate Matrix : 행렬 회전 시키기](toy-algorithms/rotateMatrix.js)
-
-#### 수 구하기 (Find Number)
-- [divisorsFn : 약수 구하기](find-number/divisorsFn.js)
-- [fibonacciFn : 피보나치 수 구하기](find-number/fibonacciFn.js)
+- [Spiral Traversal : 나선형 순회](toy-algorithms/spiralTraversal.js)
+- [Robot Path : 로봇 경로](toy-algorithms/robotPath.js)
