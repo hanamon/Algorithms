@@ -25,14 +25,22 @@
 
 #### 자료탐색 응용 (Keyword: BFS, DFS)
 - [Barcode : 바코드 만들기](data-structures/barcode.js)
-- [Sudoku : 스도쿠 완성하기](toy-algorithms/sudoku.js)
+- [Sudoku : 스도쿠 완성하기 - 미완](toy-algorithms/sudoku.js)
 
 #### 탐욕 알고리즘 (Greedy Algorithms)
-- [movingStuff : 짐 나르기](greedy-algorithms/movingStuff.js)
-- [partTimeJob : 편의점 알바](greedy-algorithms/partTimeJob.js)
+- [Moving Stuff : 짐 나르기](greedy-algorithms/movingStuff.js)
+- [Part Time Job : 편의점 알바](greedy-algorithms/partTimeJob.js)
 
+#### 순열 / 조합 알고리즘 (Permutation and Combination)
+- [중복 순열 : 가위바위보](permutation-combination)
+- [순열 : 새로운 치킨 소스 레시피](permutation-combination)
+- [조합 : 블랙잭은 지겨워](permutation-combination)
+ 
 #### 구현 문제 : 행렬 관련 (Implementation)
 - [boardGame : 보드 게임](implementation/boardGame.js)
 - [Rotate Matrix : 행렬 회전 시키기](toy-algorithms/rotateMatrix.js)
 - [Spiral Traversal : 나선형 순회](toy-algorithms/spiralTraversal.js)
 - [Robot Path : 로봇 경로](toy-algorithms/robotPath.js)
+
+#### 구현 문제 : 문자열 관련 (Implementation)
+- [Balanced Brackets : 괄호 기호 벨런스 검사](toy-algorithms/balancedBrackets.js)
