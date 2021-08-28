@@ -32,9 +32,9 @@
 - [Part Time Job : 편의점 알바](greedy-algorithms/partTimeJob.js)
 
 #### 순열 / 조합 알고리즘 (Permutation and Combination)
-- [중복 순열 : 가위바위보](permutation-combination)
-- [순열 : 새로운 치킨 소스 레시피](permutation-combination)
-- [조합 : 블랙잭은 지겨워](permutation-combination)
+- [중복 순열 : 가위바위보](permutation-combination/rockPaperScissors.js)
+- [순열 : 새로운 치킨 소스 레시피](permutation-combination/newChickenPecipe.js)
+- [조합 : 블랙잭은 지겨워](permutation-combination/boringBlackjack.js)
  
 #### 구현 문제 : 행렬 관련 (Implementation)
 - [boardGame : 보드 게임](implementation/boardGame.js)
