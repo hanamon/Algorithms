@@ -26,34 +26,36 @@ console.log(output); // 3
 // 소수가 되는 경우의 수를 리턴
 
 // [문제 분석]
-// cards에 있는 수를 3개 뽑는 경우를 찾는다 => 조합
+// cards에 있는 수를 3개 뽑는 경우를 찾는다. => 조합
 // 해당 조합의 인자들의 합을 각각 구한다.
-
-// 배열의 인자를 담은 것들을 따로 분리
-// 각각의 합을 담은 배열 중에 소수를 카운트
-// 카운트 리턴
+// 각각의 합을 담은 배열 중에 소수를 카운트한다.
+// 카운트를 리턴한다.
 
 /*--------------------------------------------------------------*/
 
 // [방법 1.]
 const boringBlackjack = (cards) => {
-  let comArr = makeCombination(cards);
+  // 조합을 배열에 담는다.
+  const comArr = makeCombination(cards);
 
-  let result = comArr.map((el) => {
+  // 조합 배열을 순회하며 조합의 합을 각각 구한다.
+  const sumArr = comArr.map((el) => {
     return el.reduce((acc, cur) => {
       return acc + cur;
     });
   });
 
-  return primeCount(result);
+  // 조합 배열의 합을 담은 배열 중에 소수를 카운트한다.
+  return primeCount(sumArr);
 }
 
-function makeCombination(cards, num = 3) {
-  if( num === 1 ) return cards.map((el) => [el]);
+// 조합을 구하는 함수
+function makeCombination(arr, num = 3) {
+  if( num === 1 ) return arr.map((el) => [el]);
 
   const result = [];
 
-  cards.forEach((el, idx, arr) => {
+  arr.forEach((el, idx, arr) => {
     const fixed = el;
     const rest = arr.slice(idx+1);
     const newArr = makeCombination(rest, num-1);
