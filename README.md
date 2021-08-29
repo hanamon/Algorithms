@@ -35,7 +35,8 @@
 - [중복 순열 : 가위바위보](permutation-combination/rockPaperScissors.js)
 - [순열 : 새로운 치킨 소스 레시피](permutation-combination/newChickenRecipe.js)
 - [조합 : 블랙잭은 지겨워](permutation-combination/boringBlackjack.js)
- 
+- [LSCS : 연속된 부분 배열의 합 중 가장 큰 값 구하기](toy-algorithms/LSCS.js)
+
 #### 구현 문제 : 행렬 관련 (Implementation)
 - [boardGame : 보드 게임](implementation/boardGame.js)
 - [Rotate Matrix : 행렬 회전 시키기](toy-algorithms/rotateMatrix.js)
