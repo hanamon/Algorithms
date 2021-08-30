@@ -42,6 +42,7 @@
 - [Rotate Matrix : 행렬 회전 시키기](toy-algorithms/rotateMatrix.js)
 - [Spiral Traversal : 나선형 순회](toy-algorithms/spiralTraversal.js)
 - [Robot Path : 로봇 경로](toy-algorithms/robotPath.js)
+- [Gossip Protocol : 마을에 소문이 퍼지는 최단 시간을 구하라](toy-algorithms/gossipProtocol.js)
 
 #### 구현 문제 : 문자열 관련 (Implementation)
 - [Balanced Brackets : 괄호 기호 벨런스 검사](toy-algorithms/balancedBrackets.js)
