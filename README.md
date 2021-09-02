@@ -19,6 +19,7 @@
 - [Class Tree : Tree 구현](data-structures/ClassTree.js)
 - [Class Graph with adjacency matrix : Graph 인접 행렬 구현](data-structures/ClassGraphWithAdjacencyMatrix.js)
 - [Class Binary Search Tree : BST 구현](data-structures/ClassBinarySearchTree.js)
+- [Binary Heap : 이진 힙 구현](toy-algorithms/binaryHeap.js)
 
 #### 자료탐색 기초 (Keyword: Graph, BFS, DFS)
 - [Create Matrix : 인접 행렬 생성하기](data-structures/createMatrix.js)
