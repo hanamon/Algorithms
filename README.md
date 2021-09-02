@@ -3,6 +3,8 @@
 #### 수 구하기 (Find Number)
 - [divisorsFn : 약수 구하기](find-number/divisorsFn.js)
 - [fibonacciFn : 피보나치 수 구하기](find-number/fibonacciFn.js)
+- [GCD : 최대 공약수 구하기](find-number/GCD.js)
+- [LCM : 최소 공배수 구하기](find-number/LCM.js)
 
 #### 정렬 알고리즘 (Sort Algorithms)
 - [bubbleSort : 버블 정렬](toy-algorithms/bubbleSort.js)
