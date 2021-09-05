@@ -39,11 +39,7 @@ const boringBlackjack = (cards) => {
   const comArr = makeCombination(cards);
 
   // 조합 배열을 순회하며 조합의 합을 각각 구한다.
-  const sumArr = comArr.map((el) => {
-    return el.reduce((acc, cur) => {
-      return acc + cur;
-    });
-  });
+  const sumArr = comArr.map((arr) => arr.reduce((a, c) => a+c));
 
   // 조합 배열의 합을 담은 배열 중에 소수를 카운트한다.
   return primeCount(sumArr);
