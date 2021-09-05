@@ -1,6 +1,6 @@
 # 🔥 JavaScript Algorithms
 
-#### 수 구하기 (Find Number)
+#### 수 구하기 (Get Number)
 - [divisorsFn : 약수 구하기](find-number/divisorsFn.js)
 - [fibonacciFn : 피보나치 수 구하기](find-number/fibonacciFn.js)
 - [GCD : 최대 공약수 구하기](find-number/GCD.js)
@@ -45,6 +45,7 @@
 - [Rotate Matrix : 행렬 회전 시키기](toy-algorithms/rotateMatrix.js)
 - [Spiral Traversal : 나선형 순회](toy-algorithms/spiralTraversal.js)
 - [Robot Path : 로봇 경로](toy-algorithms/robotPath.js)
+- [Robot Path 2 : 로봇 경로 2](toy-algorithms/robotPath2.js)
 - [Gossip Protocol : 마을에 소문이 퍼지는 최단 시간을 구하라](toy-algorithms/gossipProtocol.js)
 
 #### 구현 문제 : 문자열 관련 (Implementation)
