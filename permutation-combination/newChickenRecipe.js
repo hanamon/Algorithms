@@ -47,16 +47,18 @@ function newChickenRecipe(stuffArr, choiceNum) {
   // 1. 상한 재료 필터
   const newArr = stuffArr.filter((num) => {
     // JS filter 의 특수성... : [0]의 element는 빈 것으로 취급한다.
-    // 숫자를 문자로 변경후 배열로 만든다.
-    const arr = String(num).split('');
+    // 숫자를 문자로 변경한다.
+    const str = String(num);
     // 카운트 변수를 선언한다.
     let count = 0;
-    // arr 배열을 순회하며 0의 개수를 카운트한다.
-    arr.forEach((el) => {
-      if( el === '0' ) count++;
-    });
-    // 만약 3이하면 return
-    if( count < 3 ) return num;
+    // str을 순회하며 0의 개수를 카운트한다.
+    for( let i=0; i<str.length; i++ ) {
+      if( str[i] === '0' ) count++;
+      // 만약 3이면 break;
+      if( count === 3 ) break;
+    }
+    if( count < 3 ) return true;
+    return false;
   });
 
   // 재료 없거나 배열의 길이보다 초이스넘이 크면 return [];
@@ -69,16 +71,16 @@ function newChickenRecipe(stuffArr, choiceNum) {
   return aux(newArr, choiceNum);
 }
 
-function aux(stuffArr, choiceNum) {
-  if( choiceNum === 1 ) return stuffArr.map((el) => [el]);
+function aux(arr, choiceNum) {
+  if( choiceNum === 1 ) return arr.map((el) => [el]);
   
   const result = [];
 
-  stuffArr.forEach((el, idx, arr) => {
-    const fiexd = el;
+  arr.forEach((el, idx, arr) => {
+    const fixed = el;
     const rest = [...arr.slice(0, idx), ...arr.slice(idx+1)];
     const newArr = aux(rest, choiceNum-1);
-    const comArr = newArr.map((el) => [fiexd, ...el]);
+    const comArr = newArr.map((arr) => [fixed, ...arr]);
     result.push(...comArr);
   });
 
