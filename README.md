@@ -12,6 +12,7 @@
 - [quickSort : 퀵 정렬](toy-algorithms/quickSort.js)
 - [mergeSort : 병합 정렬](toy-algorithms/mergeSort.js)
 - [radixSort : 기수 정렬](toy-algorithms/radixSort.js)
+- [heapSort : 힙 정렬](toy-algorithms/heapSort.js)a
 
 #### 자료구조 구현 (Data Structures)
 - [Class Stack : Stack 구현](data-structures/ClassStack.js)
