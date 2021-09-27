@@ -12,7 +12,7 @@
 - [quickSort : 퀵 정렬](toy-algorithms/quickSort.js)
 - [mergeSort : 병합 정렬](toy-algorithms/mergeSort.js)
 - [radixSort : 기수 정렬](toy-algorithms/radixSort.js)
-- [heapSort : 힙 정렬](toy-algorithms/heapSort.js)a
+- [heapSort : 힙 정렬](toy-algorithms/heapSort.js)
 
 #### 자료구조 구현 (Data Structures)
 - [Class Stack : Stack 구현](data-structures/ClassStack.js)
@@ -21,6 +21,7 @@
 - [Class Graph with adjacency matrix : Graph 인접 행렬 구현](data-structures/ClassGraphWithAdjacencyMatrix.js)
 - [Class Binary Search Tree : BST 구현](data-structures/ClassBinarySearchTree.js)
 - [Binary Heap : 이진 힙 구현](toy-algorithms/binaryHeap.js)
+- [Range Minimum : 구간의 최소값 구하기](toy-algorithms/rangeMinimum.js)
 
 #### 자료탐색 기초 (Keyword: Graph, BFS, DFS)
 - [Create Matrix : 인접 행렬 생성하기](data-structures/createMatrix.js)
