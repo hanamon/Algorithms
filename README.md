@@ -5,6 +5,7 @@
 - [fibonacciFn : 피보나치 수 구하기](find-number/fibonacciFn.js)
 - [GCD : 최대 공약수 구하기](find-number/GCD.js)
 - [LCM : 최소 공배수 구하기](find-number/LCM.js)
+- [GCD : 최대 변 정사각형 구하기](permutation-combination/squareNumber.js)
 
 #### 정렬 알고리즘 (Sort Algorithms)
 - [bubbleSort : 버블 정렬](toy-algorithms/bubbleSort.js)
@@ -39,11 +40,13 @@
 #### 순열 / 조합 알고리즘 (Permutation and Combination)
 - [중복 순열 : 가위바위보](permutation-combination/rockPaperScissors.js)
 - [순열 : 새로운 치킨 소스 레시피](permutation-combination/newChickenRecipe.js)
+- [순열 : 바코드 구하기 2](problem-solving-and-algorithms/barcode2.js)
 - [조합 : 블랙잭은 지겨워](permutation-combination/boringBlackjack.js)
 - [LSCS : 연속된 부분 배열의 합 중 가장 큰 값 구하기](toy-algorithms/LSCS.js)
 
 #### 구현 문제 : 행렬 관련 (Implementation)
 - [boardGame : 보드 게임](implementation/boardGame.js)
+- [boardGame2 : 보드 게임 2](problem-solving-and-algorithms/boardGame2.js)
 - [Rotate Matrix : 행렬 회전 시키기](toy-algorithms/rotateMatrix.js)
 - [Spiral Traversal : 나선형 순회](toy-algorithms/spiralTraversal.js)
 - [Robot Path : 로봇 경로](toy-algorithms/robotPath.js)
