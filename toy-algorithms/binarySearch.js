@@ -1,5 +1,5 @@
 /**
- * [binarySearch] 이진탐색 알고리즘
+ * [binarySearch] 이진 탐색 알고리즘
  * 인진탐색을 사용해서 배열에 정수가 어디에 있는지 검사한다.
  * 
  * [요구사항]
@@ -38,7 +38,9 @@ const binarySearch = function (arr, target) {
 
     if( arr[middle] === target ) return middle;
 
-    if( target <= arr[middle] ) RIGHT = middle - 1;
+    // 타겟이 현재 탐색중인 배열의 중앙 요소의 값보다 작으면 RIGHT의 기준을 현재 탐색중인 배열의 중앙 - 1 로 변경한다.
+    // 타겟이 현재 탐색중인 배열의 중앙 요소의 값보다 크거나 같으면 LEFT의 기준을 현재 탐색중인 배열의 중앙 + 1 로 변경한다.
+    if( target < arr[middle] ) RIGHT = middle - 1;
     else LEFT = middle + 1;
   }
 
