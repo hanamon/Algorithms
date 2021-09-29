@@ -29,6 +29,7 @@
 - [Get Directions : 인접 행렬 길찾기](data-structures/getDirections.js)
 - [Connected Vertices : 연결된 정점들](data-structures/connectedVertices.js)
 - [Tree DFS : 트리 객체 DFS 탐색](toy-algorithms/treeDFS.js)
+- [Tree BFS : 트리 객체 BFS 탐색](toy-algorithms/treeBFS.js)
 
 #### 자료탐색 응용 (Keyword: BFS, DFS)
 - [Barcode : 바코드 만들기](data-structures/barcode.js)
