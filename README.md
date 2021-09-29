@@ -28,11 +28,12 @@
 - [Create Matrix : 인접 행렬 생성하기](data-structures/createMatrix.js)
 - [Get Directions : 인접 행렬 길찾기](data-structures/getDirections.js)
 - [Connected Vertices : 연결된 정점들](data-structures/connectedVertices.js)
-- [treeDFS : 트리 객체 DFS 탐색](data-structures/treeDFS.js)
+- [Tree DFS : 트리 객체 DFS 탐색](toy-algorithms/treeDFS.js)
 
 #### 자료탐색 응용 (Keyword: BFS, DFS)
 - [Barcode : 바코드 만들기](data-structures/barcode.js)
 - [Sudoku : 스도쿠 완성하기 - 미완](toy-algorithms/sudoku.js)
+- [Power Set : 문자열의 멱집합 구하기](toy-algorithms/powerSet.js)
 
 #### 탐욕 알고리즘 (Greedy Algorithms)
 - [Moving Stuff : 짐 나르기](greedy-algorithms/movingStuff.js)
