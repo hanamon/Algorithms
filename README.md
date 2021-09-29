@@ -28,6 +28,7 @@
 - [Create Matrix : 인접 행렬 생성하기](data-structures/createMatrix.js)
 - [Get Directions : 인접 행렬 길찾기](data-structures/getDirections.js)
 - [Connected Vertices : 연결된 정점들](data-structures/connectedVertices.js)
+- [treeDFS : 트리 객체 DFS 탐색](data-structures/treeDFS.js)
 
 #### 자료탐색 응용 (Keyword: BFS, DFS)
 - [Barcode : 바코드 만들기](data-structures/barcode.js)
