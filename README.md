@@ -36,6 +36,7 @@
 - [Barcode : 바코드 만들기](data-structures/barcode.js)
 - [Sudoku : 스도쿠 완성하기 - 미완](toy-algorithms/sudoku.js)
 - [Power Set : 문자열의 멱집합 구하기](toy-algorithms/powerSet.js)
+- [Rotated Array Search : 부분적으로 정렬된 배열에서 특정 값의 인덱스 구하기](toy-algorithms/rotatedArraySearch.js)
 
 #### 탐욕 알고리즘 (Greedy Algorithms)
 - [Moving Stuff : 짐 나르기](greedy-algorithms/movingStuff.js)
