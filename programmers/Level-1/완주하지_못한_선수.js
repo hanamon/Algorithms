@@ -7,21 +7,21 @@
 
 // [방법 1.]
 function solution(participant, completion) {
-  const hash = new Map();
-
+  const hashMap = new Map();
+  
   participant.map((k) => {
-    const key = hash.get(k);
-    if ( !key ) hash.set(k, 1);
-    else hash.set(k, key+1);
+    const key = hashMap.get(k);
+    if( !key ) hashMap.set(k, 1);
+    else hashMap.set(k, key+1);
   });
   
-  for( let k of completion ) {
-    const key = hash.get(k);
-    hash.set(k, key-1);
-  }
+  completion.map((k) => {
+    const key = hashMap.get(k);
+    hashMap.set(k, key-1);
+  });
   
-  for( let [key, value] of hash ) {
-    if( value !== 0 ) return key;
+  for( let [k, v] of hashMap ) {
+    if( v !== 0 ) return k;
   }
 }
 
